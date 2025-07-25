@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Music Genre Classifier 🎵</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+            background: linear-gradient(135deg, #1d1d1d, #3a3a3a);
+            color: #f1f1f1;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+        .container {
+            background: #2b2b2b;
+            padding: 3rem;
+            border-radius: 16px;
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.5);
+            text-align: center;
+            width: 100%;
+            max-width: 500px;
+            opacity: 0;
+        }
+        h1 {
+            margin-bottom: 1.5rem;
+            color: #00ffcc;
+        }
+        input[type="file"] {
+            padding: 0.8rem;
+            background: #444;
+            color: #fff;
+            border: none;
+            border-radius: 8px;
+            margin-bottom: 1rem;
+            width: 100%;
+        }
+        button {
+            padding: 0.7rem 2rem;
+            background: #00ffcc;
+            border: none;
+            color: #000;
+            font-weight: bold;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: 0.3s ease;
+        }
+        button:hover {
+            background: #00bfa6;
+        }
+        .result {
+            margin-top: 1.5rem;
+            font-size: 1.2rem;
+            color: #fff;
+        }
+        .flash {
+            color: #ff8080;
+            font-size: 1rem;
+            margin-bottom: 1rem;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <h1>🎶 Predict Music Genre</h1>
+
+        {% with messages = get_flashed_messages(with_categories=true) %}
+          {% if messages %}
+            {% for category, message in messages %}
+              <div class="flash">{{ message }}</div>
+            {% endfor %}
+          {% endif %}
+        {% endwith %}
+
+        <form method="POST" enctype="multipart/form-data">
+            <input type="file" name="file" required>
+            <br>
+            <button type="submit">Upload & Predict</button>
+        </form>
+
+        {% if genre %}
+            <div class="result">🎧 Predicted Genre: <strong>{{ genre }}</strong></div>
+        {% endif %}
+    </div>
+
+    <script>
+        // GSAP animation
+        gsap.to(".container", {
+            opacity: 1,
+            y: -10,
+            duration: 1.5,
+            ease: "power2.out"
+        });
+
+        gsap.from("h1", {
+            opacity: 0,
+            y: -50,
+            delay: 0.2,
+            duration: 1
+        });
+
+        gsap.from("form", {
+            opacity: 0,
+            y: 30,
+            delay: 0.5,
+            duration: 1
+        });
+    </script>
+</body>
+</html>
