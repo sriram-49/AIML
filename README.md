@@ -13,12 +13,7 @@ This project demonstrates how machine learning techniques can be used to classif
 - [Features](#features)
 - [Dataset Used](#dataset-used)
 - [Installation](#installation)
-- [How to Run](#how-to-run)
-- [Model and Evaluation](#model-and-evaluation)
-- [Results](#results)
-- [Project Structure](#project-structure)
-- [Screenshots](#screenshots)
-- [License](#license)
+
 
 ---
 
