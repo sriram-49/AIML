@@ -1,6 +1,8 @@
 # 🎵 Music Genre Classification Using Machine Learning 🎶
 
-This project leverages machine learning techniques to classify music genres based on audio features. It aims to provide an intelligent system capable of automatically predicting the genre of a given music file using trained AI models.
+This project demonstrates how machine learning techniques can be used to classify music genres based on audio feature extraction and predictive modeling. It is part of my Artificial Intelligence and Machine Learning (AIML) coursework.
+
+🔗 **GitHub Repository:** [github.com/sriram-49/AIML](https://github.com/sriram-49/AIML)
 
 ---
 
@@ -22,38 +24,37 @@ This project leverages machine learning techniques to classify music genres base
 
 ## 🎯 Project Overview
 
-This AI/ML-based project classifies music files into various genres like Rock, Classical, Jazz, Pop, etc., using extracted features such as MFCCs, chroma, and mel spectrograms. It demonstrates how supervised learning techniques and deep learning models can be applied in audio signal processing.
+This AI/ML-based application classifies audio files into music genres such as Classical, Pop, Rock, Jazz, etc. It uses powerful audio signal processing tools for feature extraction and machine learning models (CNN, SVM, or MLP) to predict genres.
 
 ---
 
 ## 🛠️ Tech Stack
 
 - Python 🐍
-- Librosa 🎶 (for feature extraction)
-- Scikit-learn 🔬
-- TensorFlow / Keras 🧠
-- Flask 🌐 (for web deployment)
-- HTML/CSS + GSAP (for stylish frontend animations)
-- SQLite (for data storage)
+- Librosa 🎶 (audio feature extraction)
+- Scikit-learn & Keras 🤖
+- Flask 🌐 (backend deployment)
+- HTML/CSS & GSAP ⚡ (frontend with animations)
+- SQLite 🗄️ (for storage)
 
 ---
 
 ## ✨ Features
 
-- Upload MP3/WAV files
-- Extracts features like MFCCs, Spectral Centroid, Zero-Crossing Rate
-- Predicts the genre using pre-trained model
-- Beautiful web UI with animations (GSAP)
-- Displays model confidence scores and prediction
+- Upload music files (MP3/WAV)
+- Extract audio features (MFCC, ZCR, Spectral Centroid, etc.)
+- Predicts the genre using a trained AI model
+- Displays prediction with confidence
+- Stylish UI with smooth GSAP animations
 
 ---
 
 ## 🎧 Dataset Used
 
-- **GTZAN Genre Collection**  
-  - 10 genres
-  - 1000 audio tracks (each 30 seconds long)
-  - Source: [http://marsyas.info/downloads/datasets.html](http://marsyas.info/downloads/datasets.html)
+- **GTZAN Genre Collection**
+  - 1000 audio files across 10 genres
+  - Each file: 30 seconds
+  - Source: [marsyas.info/downloads/datasets.html](http://marsyas.info/downloads/datasets.html)
 
 ---
 
@@ -61,5 +62,5 @@ This AI/ML-based project classifies music files into various genres like Rock, C
 
 1. Clone the repository:
    ```bash
-   git clone https://github.com/yourusername/music-genre-classification.git
-   cd music-genre-classification
+   git clone https://github.com/sriram-49/AIML.git
+   cd AIML/music-genre-classification
